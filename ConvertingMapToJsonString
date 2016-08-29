@@ -1,0 +1,19 @@
+package org.atul.learning;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.google.gson.Gson;
+
+public class ConvertingMapToJsonString {
+public static void main(String[] args) {
+	
+	Gson obj=new Gson();
+	Map<String, String> nmap=new HashMap<String,String>();
+	nmap.put("topic", "GSON");
+	nmap.put("website", "http://www.java2novice.com/java-json/google-gson/map-to-json/");
+	
+	String jsonFromMap=obj.toJson(nmap);
+	System.out.println("Map Conversion to Json : " + jsonFromMap);
+}
+}
