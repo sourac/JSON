@@ -1,0 +1,29 @@
+package org.atul.learning;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public class JavaObjectToJsonStringForSerialisation {
+public static void main(String[] args) {
+	JavaPojoS jp=new JavaPojoS();
+	jp.setName("Atul");
+	jp.setEmpId(2314707);
+	jp.setDesignation("Software Engineer");
+	jp.setDepartment("Development");
+	jp.setSalary(5000);
+	
+	Gson gson=new GsonBuilder().setPrettyPrinting().create();
+	String jsonStr=gson.toJson(jp);
+	System.out.println("Json String is : " + jsonStr);
+}
+}
+
+//Output
+/*Json String is : {
+  "emp_id": 2314707,
+  "emp_name": "Atul",
+  "designation": "Software Engineer",
+  "department": "Development",
+  "salary": 5000
+}
+*/
